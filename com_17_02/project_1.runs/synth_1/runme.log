@@ -1,0 +1,364 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xcku040-ffva1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-1223] The version limit for your license is '2017.03' and will expire in -186 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13650 
+WARNING: [Synth 8-1801] case statement with no case item violates IEEE 1800 syntax [/home/tansei/IS17A/com_17_02/top.sv:105]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:45 . Memory (MB): peak = 1106.566 ; gain = 171.188 ; free physical = 8882 ; free virtual = 28598
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [/home/tansei/IS17A/com_17_02/top.sv:1]
+	Parameter INST_LEN bound to: 18 - type: integer 
+	Parameter DATA_LEN bound to: 20 - type: integer 
+	Parameter REG_LEN bound to: 32 - type: integer 
+	Parameter FUNC_ADD bound to: 6'b100000 
+	Parameter FUNC_ADDI bound to: 6'b100001 
+	Parameter FUNC_SUB bound to: 6'b100010 
+	Parameter FUNC_AND bound to: 6'b100100 
+	Parameter FUNC_OR bound to: 6'b100101 
+	Parameter FUNC_NOR bound to: 6'b100111 
+	Parameter FUNC_JR bound to: 6'b001000 
+	Parameter DATA_LW bound to: 6'b010111 
+	Parameter DATA_SW bound to: 6'b011101 
+	Parameter DATA_BEQ bound to: 6'b000100 
+	Parameter DATA_BNE bound to: 6'b000101 
+	Parameter DATA_J bound to: 6'b000010 
+	Parameter DATA_JAL bound to: 6'b000011 
+	Parameter OP_A bound to: 6'b000000 
+	Parameter OP_B bound to: 6'b111111 
+INFO: [Synth 8-638] synthesizing module 'IBUFGDS' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:14584]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUFGDS' (1#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:14584]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/tansei/IS17A/com_17_02/top.sv:93]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/tansei/IS17A/com_17_02/top.sv:91]
+INFO: [Synth 8-256] done synthesizing module 'top' (2#1) [/home/tansei/IS17A/com_17_02/top.sv:1]
+WARNING: [Synth 8-3331] design top has unconnected port SW_E
+WARNING: [Synth 8-3331] design top has unconnected port SW_W
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:45 . Memory (MB): peak = 1131.824 ; gain = 196.445 ; free physical = 8854 ; free virtual = 28571
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:45 . Memory (MB): peak = 1131.824 ; gain = 196.445 ; free physical = 8853 ; free virtual = 28570
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tansei/IS17A/com_17_02/top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SW_C'. [/home/tansei/IS17A/com_17_02/top.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW_C'. [/home/tansei/IS17A/com_17_02/top.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW0'. [/home/tansei/IS17A/com_17_02/top.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW0'. [/home/tansei/IS17A/com_17_02/top.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW1'. [/home/tansei/IS17A/com_17_02/top.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW1'. [/home/tansei/IS17A/com_17_02/top.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW2'. [/home/tansei/IS17A/com_17_02/top.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW2'. [/home/tansei/IS17A/com_17_02/top.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW3'. [/home/tansei/IS17A/com_17_02/top.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'DIP_SW3'. [/home/tansei/IS17A/com_17_02/top.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_UART_CTS'. [/home/tansei/IS17A/com_17_02/top.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_UART_CTS'. [/home/tansei/IS17A/com_17_02/top.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_UART_RTS'. [/home/tansei/IS17A/com_17_02/top.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_UART_RTS'. [/home/tansei/IS17A/com_17_02/top.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_UART_RX'. [/home/tansei/IS17A/com_17_02/top.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_UART_RX'. [/home/tansei/IS17A/com_17_02/top.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_UART_TX'. [/home/tansei/IS17A/com_17_02/top.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'USB_UART_TX'. [/home/tansei/IS17A/com_17_02/top.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/tansei/IS17A/com_17_02/top.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/tansei/IS17A/com_17_02/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/tansei/IS17A/com_17_02/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1568.824 ; gain = 0.000 ; free physical = 8492 ; free virtual = 28209
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:01:03 . Memory (MB): peak = 1568.828 ; gain = 633.449 ; free physical = 8490 ; free virtual = 28207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:01:03 . Memory (MB): peak = 1568.828 ; gain = 633.449 ; free physical = 8490 ; free virtual = 28207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:01:03 . Memory (MB): peak = 1568.828 ; gain = 633.449 ; free physical = 8490 ; free virtual = 28207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:01:03 . Memory (MB): peak = 1568.828 ; gain = 633.449 ; free physical = 8487 ; free virtual = 28204
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design top has unconnected port SW_E
+WARNING: [Synth 8-3331] design top has unconnected port SW_W
+INFO: [Synth 8-3886] merging instance 'LED_reg[0]' (FDS) to 'LED_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\LED_reg[1] )
+INFO: [Synth 8-3886] merging instance 'LED_reg[2]' (FDR) to 'LED_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\LED_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (LED_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (LED_reg[1]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:01:03 . Memory (MB): peak = 1568.828 ; gain = 633.449 ; free physical = 8479 ; free virtual = 28196
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:01:10 . Memory (MB): peak = 1758.922 ; gain = 823.543 ; free physical = 8350 ; free virtual = 28067
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:01:10 . Memory (MB): peak = 1758.922 ; gain = 823.543 ; free physical = 8350 ; free virtual = 28067
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:01:10 . Memory (MB): peak = 1777.949 ; gain = 842.570 ; free physical = 8332 ; free virtual = 28049
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:01:11 . Memory (MB): peak = 1777.953 ; gain = 842.574 ; free physical = 8332 ; free virtual = 28049
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:01:11 . Memory (MB): peak = 1777.953 ; gain = 842.574 ; free physical = 8332 ; free virtual = 28049
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:01:11 . Memory (MB): peak = 1777.953 ; gain = 842.574 ; free physical = 8331 ; free virtual = 28048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:01:11 . Memory (MB): peak = 1777.953 ; gain = 842.574 ; free physical = 8331 ; free virtual = 28048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:01:11 . Memory (MB): peak = 1777.953 ; gain = 842.574 ; free physical = 8331 ; free virtual = 28048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:01:11 . Memory (MB): peak = 1777.953 ; gain = 842.574 ; free physical = 8331 ; free virtual = 28048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |LUT1    |     1|
+|3     |LUT2    |     1|
+|4     |LUT3    |     1|
+|5     |FDRE    |     6|
+|6     |FDSE    |     1|
+|7     |IBUF    |     2|
+|8     |IBUFGDS |     1|
+|9     |OBUF    |     8|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    22|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:01:11 . Memory (MB): peak = 1777.953 ; gain = 842.574 ; free physical = 8331 ; free virtual = 28048
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1777.953 ; gain = 287.598 ; free physical = 8331 ; free virtual = 28048
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:01:11 . Memory (MB): peak = 1777.957 ; gain = 842.578 ; free physical = 8331 ; free virtual = 28048
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  BUFG => BUFGCE: 1 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 25 Warnings, 18 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:01:10 . Memory (MB): peak = 1791.949 ; gain = 789.066 ; free physical = 8338 ; free virtual = 28055
+INFO: [Common 17-1381] The checkpoint '/home/tansei/IS17A/com_17_02/project_1.runs/synth_1/top.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1815.965 ; gain = 0.000 ; free physical = 8337 ; free virtual = 28054
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  3 18:00:37 2017...

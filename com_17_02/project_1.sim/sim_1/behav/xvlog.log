@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tansei/IS17A/com_17_02/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+WARNING: [VRFC 10-480] case statement with no case item violates IEEE 1800 syntax [/home/tansei/IS17A/com_17_02/top.sv:113]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tansei/IS17A/com_17_02/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
